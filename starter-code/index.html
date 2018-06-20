@@ -10,5 +10,52 @@
   <title>Ironhack cart</title>
 </head>
 <body>
+  <header>
+    <h1>
+      IronHack
+      <br> Merchandising Shop
+    </h1>
+  </header>
+  
+  <div id="container-products">
+    <div id="product" class="product">
+      <div class='product-padding'>
+        <span id="lbl-product" class="lbl-product">
+          shampoo
+        </span>
+      </div>
+      <div id='div-price' class='product-padding'>
+        <span class="product-price">$</span>
+        <span id="product-price">50</span>
+      </div>
+      <div class='product-padding'>
+        <label for="lbl-quantity" class="qty-product">QTY</label>
+        <input type="number" min="0" id="product-quantity" placeholder="0" class="product-quantity" onchange="fnChangeQty(this);">
+      </div>
+      <div id="total-product" class='product-padding'>
+        <span class="total-product">Total: $</span>
+        <span id="total-price">0</span>
+      </div>
+      <div>
+        <button class="delete-button" onclick='fnDeleteProduct(this)'>delete</button>
+      </div>
+    </div>
+  </div>
+  
+  <div>
+    <div>
+      <button type="submit" class="button-calculate-prices" id="my-btn">Calculate Prices</button>
+    </div>
+    <div>
+      <input type="text" class="new-product">
+      <input type="number" class="new-product-price">
+      <button class="create-button" id="create-button">create</button>
+    </div>
+    <div>
+      <h2>Total Price: $
+        <span id="total-price">0</span>
+      </h2>
+    </div>
+  </div>
 </body>
 </html>
